@@ -15,9 +15,13 @@ const HeroSection = () => {
             Monal <span className="text-portfolio-primary hover:text-portfolio-secondary transition-colors duration-300">Aditya</span>
           </h1>
           <div className="text-xl mb-6 text-gray-700 h-20">
-            <TypeIt>
-              Precision in logic. Simplicity in design. Purpose in every line.
-            </TypeIt>
+            <TypeIt
+              options={{
+                strings: ["Precision in logic. Simplicity in design. Purpose in every line."],
+                speed: 50,
+                waitUntilVisible: true
+              }}
+            />
           </div>
           <div className="flex flex-wrap gap-4">
             <a 
