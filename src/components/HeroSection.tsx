@@ -7,43 +7,45 @@ const HeroSection = () => {
     <section className="relative h-screen flex items-center bg-gradient-to-br from-portfolio-light to-white">
       <div className="container mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
         <div className="animate-fade-in">
-          <p className="text-portfolio-secondary font-medium mb-2">Hello, I'm</p>
-          <h1 className="text-5xl md:text-6xl font-bold mb-4">
-            Monal <span className="text-portfolio-primary">Aditya</span>
+          <p className="text-portfolio-secondary font-medium mb-2 hover:text-portfolio-primary transition-colors duration-300">
+            Hello, I'm
+          </p>
+          <h1 className="text-6xl md:text-7xl font-bold mb-4 hover:scale-105 transition-transform duration-300">
+            Monal <span className="text-portfolio-primary hover:text-portfolio-secondary transition-colors duration-300">Aditya</span>
           </h1>
-          <p className="text-xl mb-6 text-gray-700">
-            Full-Stack Developer | Problem Solver | Team Player
+          <p className="text-xl mb-6 text-gray-700 hover:text-portfolio-primary transition-colors duration-300">
+            Precision in logic. Simplicity in design. Purpose in every line.
           </p>
           <div className="flex flex-wrap gap-4">
             <a 
               href="https://drive.google.com/file/d/1uJCWucRw60oTS9ClHvMQsRDMHp7ld1E1/view?usp=drive_link"
               target="_blank" 
               rel="noopener noreferrer"
-              className="btn-primary"
+              className="btn-primary transform hover:scale-110 transition-all duration-300 hover:shadow-lg"
             >
-              Download Resume <ArrowDown size={16} />
+              Download Resume <ArrowDown className="animate-bounce" size={16} />
             </a>
-            <Link to="/contact" className="btn-outline">
+            <Link to="/contact" className="btn-outline transform hover:scale-110 transition-all duration-300 hover:shadow-lg">
               Contact Me
             </Link>
           </div>
         </div>
 
         <div className="hidden md:flex justify-center animate-slide-in">
-          <div className="relative w-80 h-80 rounded-full overflow-hidden border-4 border-portfolio-primary">
+          <div className="relative w-80 h-80 rounded-full overflow-hidden border-4 border-portfolio-primary hover:border-portfolio-secondary transition-colors duration-300 hover:scale-105 transform">
             <img
               src="/lovable-uploads/b1513417-e6dd-4da3-a3c6-66941a71a025.png"
               alt="Monal Aditya"
-              className="w-full h-full object-cover object-center"
+              className="w-full h-full object-cover object-center hover:scale-110 transition-transform duration-300"
             />
           </div>
         </div>
       </div>
 
       {/* Scroll down indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce hover:scale-110 transition-transform duration-300">
         <svg
-          className="w-6 h-6 text-portfolio-primary"
+          className="w-6 h-6 text-portfolio-primary hover:text-portfolio-secondary transition-colors duration-300"
           fill="none"
           strokeLinecap="round"
           strokeLinejoin="round"
