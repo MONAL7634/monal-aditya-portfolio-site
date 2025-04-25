@@ -1,4 +1,3 @@
-
 import { ArrowDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
@@ -22,7 +21,7 @@ const HeroSection = () => {
   return (
     <section className="relative h-screen flex items-center bg-gradient-to-br from-portfolio-light to-white">
       <div className="container mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
-        <div className="animate-fade-in backdrop-blur-sm bg-white/30 p-8 rounded-xl border border-white/20 shadow-xl">
+        <div className="animate-fade-in">
           <p className="text-portfolio-secondary font-medium mb-2 hover:text-portfolio-primary transition-colors duration-300">
             Hello, I'm
           </p>
@@ -61,7 +60,6 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Scroll down indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce hover:scale-110 transition-transform duration-300">
         <svg
           className="w-6 h-6 text-portfolio-primary hover:text-portfolio-secondary transition-colors duration-300"
@@ -76,7 +74,6 @@ const HeroSection = () => {
         </svg>
       </div>
 
-      {/* Curved shape at bottom */}
       <div className="absolute bottom-0 left-0 w-full overflow-hidden">
         <svg
           preserveAspectRatio="none"
