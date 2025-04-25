@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { cn } from '@/lib/utils';
@@ -30,9 +29,14 @@ const Navbar = () => {
       )}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <NavLink to="/" className="text-2xl font-bold text-portfolio-primary">
-          Monal <span className="text-portfolio-secondary">Aditya</span>
-        </NavLink>
+        <div>
+          <NavLink to="/" className="block text-2xl font-bold text-portfolio-primary leading-tight">
+            Monal <span className="text-portfolio-secondary">Aditya</span>
+            <p className="text-sm text-gray-600 font-normal">
+              Computer Science and Engineering Student
+            </p>
+          </NavLink>
+        </div>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-8">
