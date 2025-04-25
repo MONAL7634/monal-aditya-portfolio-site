@@ -1,21 +1,20 @@
 
 import React from 'react';
 import { 
-  CPlus, 
-  Javascript, 
-  C, 
-  Php,
-  Java,
-  Python,
-  Html,
-  Css,
-  Bootstrap,
-  Node,
-  React as ReactIcon,
-  Laravel,
-  Tailwind,
-  Mysql,
-  Mongodb
+  Code2,
+  FileJson,
+  Terminal,
+  Database,
+  Coffee,
+  BarChart2,
+  FileCode,
+  Palette,
+  Grid,
+  Server,
+  Atom,
+  BoxIcon,
+  ChevronsUp,
+  LayoutGrid
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
@@ -26,22 +25,23 @@ interface SkillIconProps {
 }
 
 const SkillIcon = ({ name, className, size = 28 }: SkillIconProps) => {
+  // Map skill names to appropriate Lucide icons
   const iconMap: Record<string, React.FC<{ size: number, className?: string }>> = {
-    'C++': CPlus,
-    'JavaScript': Javascript,
-    'C': C,
-    'PHP': Php,
-    'Java': Java,
-    'Python': Python,
-    'HTML': Html,
-    'CSS': Css,
-    'Bootstrap': Bootstrap,
-    'Node.js': Node,
-    'React': ReactIcon,
-    'Laravel': Laravel,
-    'Tailwind': Tailwind,
-    'MySQL': Mysql,
-    'MongoDB': Mongodb,
+    'C++': Code2,
+    'JavaScript': FileJson,
+    'C': Terminal,
+    'PHP': Code2,
+    'Java': Coffee,
+    'Python': BarChart2,
+    'HTML': FileCode,
+    'CSS': Palette,
+    'Bootstrap': Grid,
+    'Node.js': Server,
+    'React': Atom,
+    'Laravel': BoxIcon,
+    'Tailwind': ChevronsUp,
+    'MySQL': Database,
+    'MongoDB': LayoutGrid,
   };
 
   const Icon = iconMap[name];
