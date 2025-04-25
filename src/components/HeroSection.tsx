@@ -1,9 +1,24 @@
 
 import { ArrowDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import TypeIt from 'typeit-react';
+import { useState, useEffect } from 'react';
 
 const HeroSection = () => {
+  const [text, setText] = useState('');
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const fullText = "Precision in logic. Simplicity in design. Purpose in every line.";
+  
+  useEffect(() => {
+    if (currentIndex < fullText.length) {
+      const timeout = setTimeout(() => {
+        setText(prevText => prevText + fullText[currentIndex]);
+        setCurrentIndex(prevIndex => prevIndex + 1);
+      }, 50);
+      
+      return () => clearTimeout(timeout);
+    }
+  }, [currentIndex]);
+
   return (
     <section className="relative h-screen flex items-center bg-gradient-to-br from-portfolio-light to-white">
       <div className="container mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
@@ -15,13 +30,7 @@ const HeroSection = () => {
             Monal <span className="text-portfolio-primary hover:text-portfolio-secondary transition-colors duration-300">Aditya</span>
           </h1>
           <div className="text-xl mb-6 text-gray-700 h-20">
-            <TypeIt
-              options={{
-                strings: ["Precision in logic. Simplicity in design. Purpose in every line."],
-                speed: 50,
-                waitUntilVisible: true
-              }}
-            />
+            {text}<span className="animate-pulse">|</span>
           </div>
           <div className="flex flex-wrap gap-4">
             <a 
