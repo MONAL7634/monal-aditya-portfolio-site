@@ -12,11 +12,12 @@ import {
   Grid,
   Server,
   Atom,
-  BoxIcon,
+  Box,
   ChevronsUp,
   LayoutGrid
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { LucideIcon } from 'lucide-react';
 
 interface SkillIconProps {
   name: string;
@@ -25,8 +26,7 @@ interface SkillIconProps {
 }
 
 const SkillIcon = ({ name, className, size = 28 }: SkillIconProps) => {
-  // Map skill names to appropriate Lucide icons
-  const iconMap: Record<string, React.FC<{ size: number, className?: string }>> = {
+  const iconMap: Record<string, LucideIcon> = {
     'C++': Code2,
     'JavaScript': FileJson,
     'C': Terminal,
@@ -38,7 +38,7 @@ const SkillIcon = ({ name, className, size = 28 }: SkillIconProps) => {
     'Bootstrap': Grid,
     'Node.js': Server,
     'React': Atom,
-    'Laravel': BoxIcon,
+    'Laravel': Box,
     'Tailwind': ChevronsUp,
     'MySQL': Database,
     'MongoDB': LayoutGrid,
@@ -48,7 +48,7 @@ const SkillIcon = ({ name, className, size = 28 }: SkillIconProps) => {
 
   if (!Icon) {
     return (
-      <div className={cn('flex items-center justify-center p-2 rounded-full', className)}>
+      <div className={cn('flex items-center justify-center p-2 rounded-full backdrop-blur-sm bg-white/30', className)}>
         <span className="text-xs font-medium">{name}</span>
       </div>
     );

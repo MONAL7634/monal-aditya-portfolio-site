@@ -1,38 +1,48 @@
 
 import { ArrowDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import TypeIt from 'typeit-react';
 
 const HeroSection = () => {
   return (
     <section className="relative h-screen flex items-center bg-gradient-to-br from-portfolio-light to-white">
       <div className="container mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
-        <div className="animate-fade-in">
+        <div className="animate-fade-in backdrop-blur-sm bg-white/30 p-8 rounded-xl border border-white/20 shadow-xl">
           <p className="text-portfolio-secondary font-medium mb-2 hover:text-portfolio-primary transition-colors duration-300">
             Hello, I'm
           </p>
           <h1 className="text-6xl md:text-7xl font-bold mb-4 hover:scale-105 transition-transform duration-300">
             Monal <span className="text-portfolio-primary hover:text-portfolio-secondary transition-colors duration-300">Aditya</span>
           </h1>
-          <p className="text-xl mb-6 text-gray-700 hover:text-portfolio-primary transition-colors duration-300">
-            Precision in logic. Simplicity in design. Purpose in every line.
-          </p>
+          <div className="text-xl mb-6 text-gray-700 h-20">
+            <TypeIt
+              options={{
+                strings: ["Precision in logic. Simplicity in design. Purpose in every line."],
+                speed: 50,
+                waitUntilVisible: true
+              }}
+            />
+          </div>
           <div className="flex flex-wrap gap-4">
             <a 
               href="https://drive.google.com/file/d/1uJCWucRw60oTS9ClHvMQsRDMHp7ld1E1/view?usp=drive_link"
               target="_blank" 
               rel="noopener noreferrer"
-              className="btn-primary transform hover:scale-110 transition-all duration-300 hover:shadow-lg"
+              className="btn-primary transform hover:scale-110 transition-all duration-300 hover:shadow-lg bg-gradient-to-r from-portfolio-primary to-portfolio-secondary"
             >
               Download Resume <ArrowDown className="animate-bounce" size={16} />
             </a>
-            <Link to="/contact" className="btn-outline transform hover:scale-110 transition-all duration-300 hover:shadow-lg">
+            <Link 
+              to="/contact" 
+              className="btn-outline transform hover:scale-110 transition-all duration-300 hover:shadow-lg border-portfolio-primary hover:bg-gradient-to-r hover:from-portfolio-primary hover:to-portfolio-secondary"
+            >
               Contact Me
             </Link>
           </div>
         </div>
 
         <div className="hidden md:flex justify-center animate-slide-in">
-          <div className="relative w-80 h-80 rounded-full overflow-hidden border-4 border-portfolio-primary hover:border-portfolio-secondary transition-colors duration-300 hover:scale-105 transform">
+          <div className="relative w-80 h-80 rounded-full overflow-hidden border-4 border-portfolio-primary hover:border-portfolio-secondary transition-colors duration-300 hover:scale-105 transform backdrop-blur-sm bg-white/30">
             <img
               src="/lovable-uploads/b1513417-e6dd-4da3-a3c6-66941a71a025.png"
               alt="Monal Aditya"

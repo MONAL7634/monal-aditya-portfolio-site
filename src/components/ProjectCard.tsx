@@ -20,19 +20,19 @@ const ProjectCard = ({
   date,
 }: ProjectCardProps) => {
   return (
-    <div className="card group h-full flex flex-col">
+    <div className="group h-full flex flex-col backdrop-blur-md bg-white/30 rounded-lg shadow-xl border border-white/20 transition-all duration-300 hover:scale-105">
       <div className="relative overflow-hidden">
         <img
           src={image}
           alt={title}
           className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
         />
-        <div className="absolute top-4 right-4 bg-white rounded-full px-3 py-1 text-xs text-gray-700 font-medium">
+        <div className="absolute top-4 right-4 backdrop-blur-md bg-white/50 rounded-full px-3 py-1 text-xs text-gray-700 font-medium">
           {date}
         </div>
       </div>
       <div className="p-6 flex-1 flex flex-col">
-        <h3 className="text-xl font-semibold mb-2">{title}</h3>
+        <h3 className="text-xl font-semibold mb-2 group-hover:text-portfolio-primary transition-colors duration-300">{title}</h3>
         <p className="text-gray-600 mb-4 flex-1">{description}</p>
         <div className="mb-4">
           <h4 className="font-medium text-sm text-gray-700 mb-2">Tech Stack:</h4>
@@ -40,7 +40,7 @@ const ProjectCard = ({
             {technologies.map((tech) => (
               <span
                 key={tech}
-                className="bg-portfolio-light text-portfolio-primary text-xs px-2 py-1 rounded-md"
+                className="bg-portfolio-primary/10 text-portfolio-primary text-xs px-2 py-1 rounded-md backdrop-blur-sm"
               >
                 {tech}
               </span>
@@ -51,7 +51,7 @@ const ProjectCard = ({
           href={codeLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="btn-primary self-start"
+          className="btn-primary self-start bg-gradient-to-r from-portfolio-primary to-portfolio-secondary hover:scale-105 transition-all duration-300"
         >
           <Github size={16} /> View Code
         </a>
