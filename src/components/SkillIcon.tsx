@@ -48,13 +48,23 @@ const SkillIcon = ({ name, className, size = 28 }: SkillIconProps) => {
 
   if (!Icon) {
     return (
-      <div className={cn('flex items-center justify-center p-2 rounded-full backdrop-blur-sm bg-white/30', className)}>
-        <span className="text-xs font-medium">{name}</span>
+      <div className={cn('flex items-center justify-center p-2 rounded-full backdrop-blur-sm bg-white/30 hover:bg-white/50 transition-all duration-300 hover:scale-110 hover:rotate-3 group', className)}>
+        <span className="text-xs font-medium group-hover:text-portfolio-primary">{name}</span>
       </div>
     );
   }
 
-  return <Icon size={size} className={className} />;
+  return (
+    <div className="group">
+      <Icon 
+        size={size} 
+        className={cn(
+          className,
+          "transition-all duration-300 hover:scale-125 hover:rotate-6 group-hover:text-portfolio-primary"
+        )} 
+      />
+    </div>
+  );
 };
 
 export default SkillIcon;
