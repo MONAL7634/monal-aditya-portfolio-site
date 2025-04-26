@@ -85,13 +85,13 @@ const About = () => {
               <div className="mb-6 border-l-4 border-portfolio-primary pl-4">
                 <h4 className="font-semibold">Lovely Professional University</h4>
                 <p className="text-gray-600">Bachelor of Technology - Computer Science and Engineering</p>
-                <p className="text-gray-500">August 2022 - Present | CGPA: 7.16</p>
+                <p className="text-gray-500">August 2022 - Present | CGPA: 7.46</p>
               </div>
 
               <div className="mb-6 border-l-4 border-portfolio-primary pl-4">
-                <h4 className="font-semibold">B.I.T Indo-Anglian School</h4>
+                <h4 className="font-semibold">B.L Indo-Anglian School</h4>
                 <p className="text-gray-600">Higher Secondary Education</p>
-                <p className="text-gray-500">April 2018 - April 2022 | Percentage: 83.2%</p>
+                <p className="text-gray-500">April 2018 - April 2022 | Percentage: 65.2%</p>
               </div>
 
               <div className="mb-6 border-l-4 border-portfolio-primary pl-4">
