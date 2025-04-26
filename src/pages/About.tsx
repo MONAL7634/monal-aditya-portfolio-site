@@ -58,7 +58,7 @@ const About = () => {
                   <span className="font-medium">Phone:</span> +91-7634910177
                 </p>
                 <p className="mb-1">
-                  <span className="font-medium">Location:</span> Punjab, India
+                  <span className="font-medium">Location:</span> Aurangabad, Bihar 824101
                 </p>
               </div>
             </div>
