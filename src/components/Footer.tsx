@@ -85,7 +85,7 @@ const Footer = () => {
               <span className="font-semibold">Phone:</span> +91-7634910177
             </p>
             <p className="text-gray-300">
-              <span className="font-semibold">Location:</span> Punjab, India
+              <span className="font-semibold">Location:</span> Aurangabad, Bihar 824101
             </p>
           </div>
         </div>
