@@ -139,7 +139,7 @@ const Contact = () => {
                 <MapPin className="text-portfolio-primary mr-4 mt-1" size={20} />
                 <div>
                   <h3 className="font-medium">Location</h3>
-                  <p className="text-gray-700">Punjab, India</p>
+                  <p className="text-gray-700">Aurangabad, Bihar 824101</p>
                 </div>
               </div>
             </div>
