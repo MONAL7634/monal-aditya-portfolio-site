@@ -15,7 +15,7 @@ const About = () => {
             <div className="md:col-span-1">
               <div className="rounded-lg overflow-hidden mb-4">
                 <img 
-                  src="/lovable-uploads/b1513417-e6dd-4da3-a3c6-66941a71a025.png" 
+                  src="/lovable-uploads/8a52db6a-8b6d-464f-99a0-41fa61e1a6c6.png" 
                   alt="Monal Aditya" 
                   className="w-full h-auto"
                 />
