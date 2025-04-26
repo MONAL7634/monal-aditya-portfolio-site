@@ -70,25 +70,25 @@ const Projects = () => {
             <h2 className="text-2xl font-bold mb-6">My Development Process</h2>
             
             <div className="grid md:grid-cols-4 gap-4">
-              <div className="bg-white p-6 rounded-lg shadow-md">
+              <div className="bg-white p-6 rounded-lg shadow-md h-full">
                 <div className="bg-portfolio-light text-portfolio-primary w-12 h-12 rounded-full flex items-center justify-center mb-4 text-xl font-bold">1</div>
                 <h3 className="font-bold mb-2">Planning</h3>
                 <p className="text-gray-700 text-sm">Requirements gathering and project scoping to define clear objectives.</p>
               </div>
               
-              <div className="bg-white p-6 rounded-lg shadow-md">
+              <div className="bg-white p-6 rounded-lg shadow-md h-full">
                 <div className="bg-portfolio-light text-portfolio-primary w-12 h-12 rounded-full flex items-center justify-center mb-4 text-xl font-bold">2</div>
                 <h3 className="font-bold mb-2">Design</h3>
                 <p className="text-gray-700 text-sm">Creating wireframes and architecture to establish the project foundation.</p>
               </div>
               
-              <div className="bg-white p-6 rounded-lg shadow-md">
+              <div className="bg-white p-6 rounded-lg shadow-md h-full">
                 <div className="bg-portfolio-light text-portfolio-primary w-12 h-12 rounded-full flex items-center justify-center mb-4 text-xl font-bold">3</div>
                 <h3 className="font-bold mb-2">Development</h3>
                 <p className="text-gray-700 text-sm">Implementing features with clean, efficient, and well-tested code.</p>
               </div>
               
-              <div className="bg-white p-6 rounded-lg shadow-md">
+              <div className="bg-white p-6 rounded-lg shadow-md h-full">
                 <div className="bg-portfolio-light text-portfolio-primary w-12 h-12 rounded-full flex items-center justify-center mb-4 text-xl font-bold">4</div>
                 <h3 className="font-bold mb-2">Deployment</h3>
                 <p className="text-gray-700 text-sm">Testing, optimization, and successful project delivery.</p>
