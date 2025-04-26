@@ -42,31 +42,6 @@ const Index = () => {
       {/* Hero Section */}
       <HeroSection />
 
-      {/* About Section Preview */}
-      <section className="section-container">
-        <div className="grid md:grid-cols-2 gap-10 items-center">
-          <div className="animate-slide-up">
-            <h2 className="section-title">About Me</h2>
-            <p className="text-gray-700 mb-6">
-              Hello! I'm Monal Aditya, a passionate full-stack developer currently
-              pursuing my B.Tech in Computer Science at Lovely Professional University.
-              I specialize in building robust and user-friendly web applications with a
-              focus on solving real-world problems.
-            </p>
-            <Link to="/about" className="btn-outline">
-              Learn More
-            </Link>
-          </div>
-          <div className="rounded-lg overflow-hidden shadow-xl animate-slide-up">
-            <img
-              src="/lovable-uploads/b1513417-e6dd-4da3-a3c6-66941a71a025.png"
-              alt="Monal Aditya working"
-              className="w-full h-auto"
-            />
-          </div>
-        </div>
-      </section>
-
       {/* Skills Section Preview */}
       <section className="bg-gray-50 py-16 md:py-24">
         <div className="container mx-auto px-4">
@@ -135,3 +110,4 @@ const Index = () => {
 };
 
 export default Index;
+
