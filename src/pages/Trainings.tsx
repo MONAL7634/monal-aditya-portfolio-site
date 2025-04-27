@@ -42,7 +42,6 @@ const Trainings = () => {
                   <p>• Duration: May 6, 2024 - July 17, 2024</p>
                   <p>• Institution: Lovely Professional University</p>
                   <p>• Grade Achieved: A</p>
-                  <p>• Registration Number: 12219826</p>
                 </div>
 
                 <div className="mt-6">
