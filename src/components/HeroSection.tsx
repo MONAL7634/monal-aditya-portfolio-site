@@ -7,16 +7,25 @@ const HeroSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const fullText = "Precision in logic. Simplicity in design. Purpose in every line.";
   
-  useEffect(() => {
-    if (currentIndex < fullText.length) {
-      const timeout = setTimeout(() => {
-        setText(prevText => prevText + fullText[currentIndex]);
-        setCurrentIndex(prevIndex => prevIndex + 1);
-      }, 50);
-      
-      return () => clearTimeout(timeout);
-    }
-  }, [currentIndex]);
+ useEffect(() => {
+  if (currentIndex < fullText.length) {
+    const timeout = setTimeout(() => {
+      setText(prevText => prevText + fullText[currentIndex]);
+      setCurrentIndex(prevIndex => prevIndex + 1);
+    }, 50);
+
+    return () => clearTimeout(timeout);
+  } else {
+    // After finishing, wait a bit and restart
+    const resetTimeout = setTimeout(() => {
+      setText('');
+      setCurrentIndex(0);
+    }, 2000); // 2-second pause before restarting
+
+    return () => clearTimeout(resetTimeout);
+  }
+}, [currentIndex]);
+
 
   return (
     <section className="relative h-screen flex items-center bg-gradient-to-br from-portfolio-light to-white">
