@@ -26,6 +26,11 @@ const ProjectCard = ({
           src={image}
           alt={title}
           className="w-full h-48 object-cover transition-all duration-700 group-hover:scale-110 group-hover:rotate-2"
+          loading="lazy"
+          onError={(e) => {
+            console.error(`Failed to load image: ${image}`);
+            e.currentTarget.src = '/placeholder.svg';
+          }}
         />
         <div className="absolute top-4 right-4 backdrop-blur-md bg-white/50 rounded-full px-3 py-1 text-xs text-gray-700 font-medium transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-2">
           {date}
