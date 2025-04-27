@@ -1,4 +1,3 @@
-
 import { ArrowDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
@@ -53,11 +52,10 @@ const HeroSection = () => {
         <div className="hidden md:flex justify-center animate-slide-in">
           <div className="relative w-80 h-80 rounded-full overflow-hidden border-4 border-portfolio-primary hover:border-portfolio-secondary transition-all duration-500 hover:scale-105 transform backdrop-blur-sm bg-white/30 group">
             <img
-  src="/lovable-uploads/WhatsApp%20Image%202025-04-26%20at%2023.18.45_a6e70bfb.jpg"
-  alt="Monal Aditya"
-  className="w-full h-full object-cover object-center transition-all duration-500 group-hover:scale-110 group-hover:rotate-3"
-/>
-
+              src="/lovable-uploads/5f4ba809-5a0a-4659-8ca8-8dc5f68f556f.png"
+              alt="Monal Aditya"
+              className="w-full h-full object-cover object-center transition-all duration-500 group-hover:scale-110 group-hover:rotate-3"
+            />
           </div>
         </div>
       </div>

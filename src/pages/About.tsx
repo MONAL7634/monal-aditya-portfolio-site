@@ -15,7 +15,7 @@ const About = () => {
             <div className="md:col-span-1">
               <div className="rounded-lg overflow-hidden mb-4">
                 <img 
-                  src="/lovable-uploads/WhatsApp%20Image%202025-04-26%20at%2023.18.45_a6e70bfb.jpg" 
+                  src="/lovable-uploads/5f4ba809-5a0a-4659-8ca8-8dc5f68f556f.png" 
                   alt="Monal Aditya" 
                   className="w-full h-auto"
                 />
