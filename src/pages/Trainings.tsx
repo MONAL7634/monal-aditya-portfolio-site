@@ -8,7 +8,7 @@ const Trainings = () => {
     <Layout>
       <section className="section-container">
         <div className="text-center mb-12 animate-fade-in">
-          <h1 className="section-title mx-auto">Trainings & Workshops</h1>
+          <h1 className="section-title mx-auto">Trainings</h1>
           <p className="text-gray-700 max-w-2xl mx-auto">
             Exploring various technical domains through structured learning programs and hands-on workshops
           </p>
