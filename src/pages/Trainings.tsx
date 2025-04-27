@@ -1,7 +1,7 @@
 
 import React from 'react';
 import Layout from '@/components/Layout';
-import { Calendar } from 'lucide-react';
+import { Book, GraduationCap } from 'lucide-react';
 
 const Trainings = () => {
   return (
@@ -10,27 +10,53 @@ const Trainings = () => {
         <div className="text-center mb-12 animate-fade-in">
           <h1 className="section-title mx-auto">Trainings & Workshops</h1>
           <p className="text-gray-700 max-w-2xl mx-auto">
-            Information about my professional training experiences and workshops will be added soon. 
-            This section will highlight the various training programs, bootcamps, and workshops that have contributed to my skill development.
+            Exploring various technical domains through structured learning programs and hands-on workshops
           </p>
         </div>
 
-        {/* Placeholder content */}
-        <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-md p-8 animate-slide-up">
-          <div className="flex justify-center mb-8">
-            <Calendar size={80} className="text-portfolio-primary" />
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8 items-start">
+            {/* Certificate Display */}
+            <div className="bg-white rounded-lg shadow-md overflow-hidden animate-slide-up">
+              <img
+                src="/lovable-uploads/356e6404-9f09-4f6a-806b-1ed0be68cc57.png"
+                alt="DSA Training Certificate"
+                className="w-full h-auto object-contain hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+
+            {/* Training Details */}
+            <div className="bg-white rounded-lg shadow-md p-8 animate-slide-up">
+              <div className="flex items-center gap-3 mb-4">
+                <Book className="text-portfolio-primary w-8 h-8" />
+                <h2 className="text-2xl font-bold text-gray-800">Data Structures and Algorithms</h2>
+              </div>
+
+              <div className="space-y-4 text-gray-700">
+                <p className="flex items-center gap-2">
+                  <GraduationCap className="text-portfolio-secondary" />
+                  <span className="font-semibold">Course:</span> Mastering Data Structures and Algorithms: Theory to Practice
+                </p>
+
+                <div className="border-l-4 border-portfolio-primary pl-4 space-y-2">
+                  <p>• Duration: May 6, 2024 - July 17, 2024</p>
+                  <p>• Institution: Lovely Professional University</p>
+                  <p>• Grade Achieved: A</p>
+                  <p>• Registration Number: 12219826</p>
+                </div>
+
+                <div className="mt-6">
+                  <h3 className="font-semibold mb-2">Key Learnings:</h3>
+                  <ul className="list-disc pl-5 space-y-2">
+                    <li>Advanced data structure implementations and their practical applications</li>
+                    <li>Algorithm design techniques and problem-solving strategies</li>
+                    <li>Time and space complexity analysis</li>
+                    <li>Hands-on experience with real-world programming challenges</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
-          
-          <h2 className="text-2xl font-bold text-center mb-4">Coming Soon</h2>
-          
-          <p className="text-gray-700 text-center mb-6">
-            I'm currently organizing information about my training experiences to share here. 
-            Check back soon for updates on my professional development journey.
-          </p>
-          
-          <p className="text-gray-700 text-center">
-            In the meantime, feel free to explore my projects, skills, and certifications to learn more about my technical expertise.
-          </p>
         </div>
       </section>
     </Layout>
