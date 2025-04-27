@@ -59,7 +59,7 @@ const HeroSection = () => {
         </div>
 
         <div className="hidden md:flex justify-center animate-slide-in">
-          <div className="relative w-80 h-80 rounded-full overflow-hidden border-4 border-portfolio-primary hover:border-portfolio-secondary transition-all duration-500 hover:scale-105 transform backdrop-blur-sm bg-white/30 group">
+          <div className="relative w-96 h-96 rounded-full overflow-hidden border-4 border-portfolio-primary hover:border-portfolio-secondary transition-all duration-500 hover:scale-105 transform backdrop-blur-sm bg-white/30 group">
             <img
               src="/lovable-uploads/5f4ba809-5a0a-4659-8ca8-8dc5f68f556f.png"
               alt="Monal Aditya"
