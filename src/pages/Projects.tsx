@@ -63,38 +63,30 @@ const Projects = () => {
       </section>
 
       <section className="bg-gray-50 py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto animate-slide-up">
-            <h2 className="text-2xl font-bold mb-6">My Development Process</h2>
-            
-            <div className="grid md:grid-cols-4 gap-4">
-              <div className="bg-white p-6 rounded-lg shadow-md h-full flex flex-col">
-                <div className="bg-portfolio-light text-portfolio-primary w-12 h-12 rounded-full flex items-center justify-center mb-4 text-xl font-bold">1</div>
-                <h3 className="font-bold mb-2">Planning</h3>
-                <p className="text-gray-700 text-sm break-words">Requirements gathering and project scoping to define clear objectives.</p>
-              </div>
-              
-              <div className="bg-white p-6 rounded-lg shadow-md h-full flex flex-col">
-                <div className="bg-portfolio-light text-portfolio-primary w-12 h-12 rounded-full flex items-center justify-center mb-4 text-xl font-bold">2</div>
-                <h3 className="font-bold mb-2">Design</h3>
-                <p className="text-gray-700 text-sm break-words">Creating wireframes and architecture to establish the project foundation.</p>
-              </div>
-              
-              <div className="bg-white p-6 rounded-lg shadow-md h-full flex flex-col">
-                <div className="bg-portfolio-light text-portfolio-primary w-12 h-12 rounded-full flex items-center justify-center mb-4 text-xl font-bold">3</div>
-                <h3 className="font-bold mb-2">Development</h3>
-                <p className="text-gray-700 text-sm break-words">Implementing features with clean, efficient, and well-tested code.</p>
-              </div>
-              
-              <div className="bg-white p-6 rounded-lg shadow-md h-full flex flex-col">
-                <div className="bg-portfolio-light text-portfolio-primary w-12 h-12 rounded-full flex items-center justify-center mb-4 text-xl font-bold">4</div>
-                <h3 className="font-bold mb-2">Deployment</h3>
-                <p className="text-gray-700 text-sm break-words">Testing, optimization, and successful project delivery.</p>
-              </div>
+  <div className="container mx-auto px-4">
+    <div className="max-w-6xl mx-auto animate-slide-up">
+      <h2 className="text-3xl font-bold mb-10 text-center">My Development Process</h2>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {[
+          { title: "Planning", description: "Requirements gathering and project scoping to define clear objectives." },
+          { title: "Design", description: "Creating wireframes and architecture to establish the project foundation." },
+          { title: "Development", description: "Implementing features with clean, efficient, and well-tested code." },
+          { title: "Deployment", description: "Testing, optimization, and successful project delivery." },
+        ].map((step, index) => (
+          <div key={index} className="bg-white p-6 rounded-lg shadow-md h-full flex flex-col items-center text-center">
+            <div className="bg-portfolio-light text-portfolio-primary w-12 h-12 rounded-full flex items-center justify-center mb-4 text-xl font-bold">
+              {index + 1}
             </div>
+            <h3 className="font-bold mb-2 text-lg">{step.title}</h3>
+            <p className="text-gray-700 text-sm">{step.description}</p>
           </div>
-        </div>
-      </section>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
     </Layout>
   );
 };
