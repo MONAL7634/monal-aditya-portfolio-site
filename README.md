@@ -4,7 +4,7 @@ Welcome to my personal developer portfolio repository. This portfolio is a refle
 
 ## 🔗 Live Site
 
-👉 **[View Portfolio Live](https://monal-aditya-portfolio-site.lovable.app/)
+👉 [View Portfolio Live](https://monal-aditya-portfolio-site.lovable.app/)
 
 ---
 
