@@ -10,7 +10,7 @@ const Projects = () => {
       description: 'Developed an intuitive event management website using React, React Router, and Tailwind CSS to simplify event creation, booking, and management. Implemented RESTful APIs with Express.js and Node.js, leveraging MongoDB for efficient data storage and retrieval.',
       technologies: ['React', 'Node.js', 'Express.js', 'MongoDB', 'Tailwind CSS', 'JWT', 'Redux'],
       image: '/lovable-uploads/eventsphere.jpg',
-      codeLink: 'https://github.com/MONAL7634',
+      codeLink: 'https://github.com/MONAL7634/EventSphere',
       date: 'Feb 2025',
     },
     {
@@ -18,7 +18,7 @@ const Projects = () => {
       description: 'Built a comprehensive pathology management web application for both to book tests, access reports, and manage lab operations. Utilized React Router and Tailwind CSS to create a responsive and user-friendly interface.',
       technologies: ['React', 'Node.js', 'Express.js', 'MongoDB', 'Tailwind CSS', 'JWT', 'Redux', 'Multer'],
       image: '/lovable-uploads/pathology-web.jpg',
-      codeLink: 'https://github.com/MONAL7634',
+      codeLink: 'https://github.com/MONAL7634/Pathology-Management-System',
       date: 'Oct 2024',
     },
     {
@@ -26,7 +26,7 @@ const Projects = () => {
       description: 'Designed an interactive direction website using HTML, CSS, and JavaScript for seamless navigation and route planning. Enabled real-time location-based direction suggestions and interactive map integration for a user-friendly experience.',
       technologies: ['HTML', 'CSS', 'JavaScript'],
       image: '/lovable-uploads/direction.jpg',
-      codeLink: 'https://github.com/MONAL7634',
+      codeLink: 'https://github.com/MONAL7634/K22PA_FrontEnd-Project_Direction-Website',
       date: 'July 2024',
     },
   ];
