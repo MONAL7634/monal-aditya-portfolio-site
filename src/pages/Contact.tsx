@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import Layout from '@/components/Layout';
 import { Github, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
@@ -34,7 +33,7 @@ const Contact = () => {
     if (!formData.email.trim()) {
       errors.email = 'Email is required';
       valid = false;
-    } else if (!/^\S+@\S+\.\S+$/.test(formData.email)) {
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
       errors.email = 'Please enter a valid email';
       valid = false;
     }
@@ -54,8 +53,7 @@ const Contact = () => {
       ...prev,
       [name]: value,
     }));
-    
-    // Clear error when user types
+
     if (formErrors[name as keyof typeof formErrors]) {
       setFormErrors((prev) => ({
         ...prev,
@@ -66,32 +64,41 @@ const Contact = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!validateForm()) {
       return;
     }
-    
+
     setIsSubmitting(true);
-    
+
     try {
-      // FormSubmit will handle the form submission
-      // The actual submission will happen via the form action
-      toast({
-        title: "Success!",
-        description: "Your message has been sent. I'll get back to you soon.",
+      const response = await fetch('https://formsubmit.co/ajax/monaladitya7@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        }),
       });
-      
-      // Reset form after submission
-      setFormData({
-        name: '',
-        email: '',
-        message: '',
-      });
+
+      if (response.ok) {
+        toast({
+          title: 'Success!',
+          description: "Your message has been sent. I'll get back to you soon.",
+        });
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        throw new Error('Failed to send');
+      }
     } catch (error) {
       toast({
-        title: "Error",
-        description: "There was a problem sending your message. Please try again.",
-        variant: "destructive",
+        title: 'Error',
+        description: 'There was a problem sending your message. Please try again.',
+        variant: 'destructive',
       });
     } finally {
       setIsSubmitting(false);
@@ -112,21 +119,17 @@ const Contact = () => {
           {/* Contact Information */}
           <div className="bg-white shadow-lg rounded-lg p-8">
             <h2 className="text-2xl font-bold mb-6">Contact Information</h2>
-            
+
             <div className="space-y-6">
               <div className="flex items-start">
                 <Mail className="text-portfolio-primary mr-4 mt-1" size={20} />
                 <div>
                   <h3 className="font-medium">Email</h3>
-                  <a 
-                    href="mailto:monaladitya7@gmail.com"
-                    className="text-gray-700 hover:text-portfolio-primary transition-colors"
-                  >
+                  <a href="mailto:monaladitya7@gmail.com" className="text-gray-700 hover:text-portfolio-primary transition-colors">
                     monaladitya7@gmail.com
                   </a>
                 </div>
               </div>
-              
               <div className="flex items-start">
                 <Phone className="text-portfolio-primary mr-4 mt-1" size={20} />
                 <div>
@@ -134,120 +137,89 @@ const Contact = () => {
                   <p className="text-gray-700">+91-7634910177</p>
                 </div>
               </div>
-              
               <div className="flex items-start">
                 <MapPin className="text-portfolio-primary mr-4 mt-1" size={20} />
                 <div>
                   <h3 className="font-medium">Location</h3>
-                  <p className="text-gray-700">Aurangabad, Bihar 824101</p>
+                  <p className="text-gray-700">Aurangabad, Bihar 824101</p>
                 </div>
               </div>
             </div>
-            
+
             <div className="mt-8">
               <h3 className="font-medium mb-4">Connect with me</h3>
               <div className="flex space-x-4">
-                <a 
-                  href="https://github.com/MONAL7634" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="bg-gray-800 hover:bg-gray-900 text-white w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-300"
-                  aria-label="GitHub"
-                >
+                <a href="https://github.com/MONAL7634" target="_blank" rel="noopener noreferrer"
+                  className="bg-gray-800 hover:bg-gray-900 text-white w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-300">
                   <Github size={18} />
                 </a>
-                <a 
-                  href="https://www.linkedin.com/in/monal-aditya/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="bg-blue-600 hover:bg-blue-700 text-white w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-300"
-                  aria-label="LinkedIn"
-                >
+                <a href="https://www.linkedin.com/in/monal-aditya/" target="_blank" rel="noopener noreferrer"
+                  className="bg-blue-600 hover:bg-blue-700 text-white w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-300">
                   <Linkedin size={18} />
                 </a>
-                <a 
-                  href="mailto:monaladitya7@gmail.com" 
-                  className="bg-red-500 hover:bg-red-600 text-white w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-300"
-                  aria-label="Email"
-                >
+                <a href="mailto:monaladitya7@gmail.com"
+                  className="bg-red-500 hover:bg-red-600 text-white w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-300">
                   <Mail size={18} />
                 </a>
               </div>
             </div>
           </div>
-          
+
           {/* Contact Form */}
           <div className="bg-white shadow-lg rounded-lg p-8">
             <h2 className="text-2xl font-bold mb-6">Send a Message</h2>
-            <form 
-  action="https://formsubmit.co/monaladitya7@gmail.com" 
-  method="POST"
-  className="space-y-6"
->
-  <input type="hidden" name="_autoresponse" value="Thank you for contacting Monal Aditya! I'll get back to you soon." />
-  
-  {/* Fields */}
-  
-  <div>
-    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-      Name
-    </label>
-    <input
-      type="text"
-      id="name"
-      name="name"
-      required
-      value={formData.name}
-      onChange={handleChange}
-      className="..."
-      placeholder="Your name"
-    />
-  </div>
 
-  <div>
-    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-      Email
-    </label>
-    <input
-      type="email"
-      id="email"
-      name="email"
-      required
-      value={formData.email}
-      onChange={handleChange}
-      className="..."
-      placeholder="Your email"
-    />
-  </div>
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div>
+                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  className={`w-full px-4 py-2 border rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-portfolio-primary ${formErrors.name ? 'border-red-500' : 'border-gray-300'}`}
+                  placeholder="Your name"
+                />
+                {formErrors.name && <p className="mt-1 text-sm text-red-500">{formErrors.name}</p>}
+              </div>
 
-  <div>
-    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-      Message
-    </label>
-    <textarea
-      id="message"
-      name="message"
-      required
-      value={formData.message}
-      onChange={handleChange}
-      rows={6}
-      className="..."
-      placeholder="Your message"
-    ></textarea>
-  </div>
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  className={`w-full px-4 py-2 border rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-portfolio-primary ${formErrors.email ? 'border-red-500' : 'border-gray-300'}`}
+                  placeholder="Your email"
+                />
+                {formErrors.email && <p className="mt-1 text-sm text-red-500">{formErrors.email}</p>}
+              </div>
 
-  <button
-    type="submit"
-    className="..."
-    disabled={isSubmitting}
-  >
-    {isSubmitting ? 'Sending...' : 'Send Message'}
-  </button>
-</form>
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  rows={6}
+                  className={`w-full px-4 py-2 border rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-portfolio-primary ${formErrors.message ? 'border-red-500' : 'border-gray-300'}`}
+                  placeholder="Your message"
+                />
+                {formErrors.message && <p className="mt-1 text-sm text-red-500">{formErrors.message}</p>}
+              </div>
 
-            
-               
-                  
+              <button
+                type="submit"
+                className="w-full py-3 px-6 bg-portfolio-primary hover:bg-portfolio-secondary text-white rounded-md transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-portfolio-primary focus:ring-offset-2 disabled:opacity-70 disabled:cursor-not-allowed"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? 'Sending...' : 'Send Message'}
+              </button>
+            </form>
           </div>
         </div>
       </section>
