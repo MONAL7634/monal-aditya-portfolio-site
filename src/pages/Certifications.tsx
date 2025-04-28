@@ -10,28 +10,28 @@ const Certifications = () => {
       issuer: 'Google',
       date: 'December 2023',
       link: 'https://coursera.org/verify/7L98TKD5A2WE',
-      image: '/lovable-uploads/48cacd0d-5cb6-405f-8e1b-68f3c6ffc102.png',
+      image: '/lovable-uploads/CERTIFICATE_LANDING_PAGE~7L98TKD5A2WE.jpeg',
     },
     {
       title: 'Server side JavaScript with Node.js',
       issuer: 'NIIT',
       date: 'May 2024',
       link: 'https://coursera.org/verify/GKA5EHQW7DAR',
-      image: '/lovable-uploads/297e404e-a821-4f5f-848d-581f55927d40.png',
+      image: '/lovable-uploads/CERTIFICATE_LANDING_PAGE~GKASEHQW7DAB.jpeg',
     },
     {
       title: 'Programming in C++: A Hands-on Introduction',
       issuer: 'Codio',
       date: 'February 2024',
       link: 'https://coursera.org/verify/specialization/DUTT8D2JCHR',
-      image: '/lovable-uploads/a2542b9d-1cf7-4385-a09c-df05bc8a3462.png',
+      image: '/lovable-uploads/CERTIFICATE_LANDING_PAGE~JDUTT8D2JCHR.jpeg',
     },
     {
       title: 'Building Web Applications in PHP',
       issuer: 'University of Michigan',
       date: 'November 2024',
       link: 'https://coursera.org/verify/IZOZEZE4490',
-      image: '/lovable-uploads/865c593a-8c59-4077-8ece-61251f7bc596.png',
+      image: '/lovable-uploads/CERTIFICATE_LANDING_PAGE~JJZQ6ZE54490.jpeg',
     }
   ];
 
