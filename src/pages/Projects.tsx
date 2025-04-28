@@ -17,7 +17,7 @@ const Projects = () => {
       title: 'PathLab - Pathology Management Website',
       description: 'Built a comprehensive pathology management web application for both to book tests, access reports, and manage lab operations. Utilized React Router and Tailwind CSS to create a responsive and user-friendly interface.',
       technologies: ['React', 'Node.js', 'Express.js', 'MongoDB', 'Tailwind CSS', 'JWT', 'Redux', 'Multer'],
-      image: '/lovable-uploads/pathology web.jpg',
+      image: '/lovable-uploads/pathology%web.jpg',
       codeLink: 'https://github.com/MONAL7634',
       date: 'Oct 2024',
     },
