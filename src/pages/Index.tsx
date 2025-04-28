@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Layout from '@/components/Layout';
 import HeroSection from '@/components/HeroSection';
@@ -23,7 +22,7 @@ const Index = () => {
       title: 'EventSphere',
       description: 'Developed an intuitive event management website using React to simplify event creation, booking, and management.',
       technologies: ['React', 'Node.js', 'MongoDB', 'Express.js', 'Tailwind CSS'],
-      image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80',
+      image: '/lovable-uploads/865c593a-8c59-4077-8ece-61251f7bc596.png',
       codeLink: 'https://github.com/MONAL7634',
       date: 'Feb 2025',
     },
@@ -31,7 +30,7 @@ const Index = () => {
       title: 'PathLab',
       description: 'Built a comprehensive pathology management web application to book tests, access reports, and manage lab operations.',
       technologies: ['React', 'Node.js', 'MongoDB', 'Express.js', 'Redux'],
-      image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80',
+      image: '/lovable-uploads/9ddc38e1-e86c-47fa-bb7d-522800a0755b.png',
       codeLink: 'https://github.com/MONAL7634',
       date: 'Oct 2024',
     },
