@@ -16,13 +16,13 @@ const Index = () => {
     { name: 'CSS', category: 'Languages' },
   ];
 
-  // Featured projects
+  // Updated featured projects with new images
   const featuredProjects = [
     {
       title: 'EventSphere',
       description: 'Developed an intuitive event management website using React to simplify event creation, booking, and management.',
       technologies: ['React', 'Node.js', 'MongoDB', 'Express.js', 'Tailwind CSS'],
-      image: 'https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
+      image: '/lovable-uploads/c42b0869-98c0-4be6-bd2b-dc0eb8543e84.png',
       codeLink: 'https://github.com/MONAL7634',
       date: 'Feb 2025',
     },
@@ -30,7 +30,7 @@ const Index = () => {
       title: 'PathLab',
       description: 'Built a comprehensive pathology management web application to book tests, access reports, and manage lab operations.',
       technologies: ['React', 'Node.js', 'MongoDB', 'Express.js', 'Redux'],
-      image: 'https://images.unsplash.com/photo-1579154204601-01588f351e67?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
+      image: '/lovable-uploads/f3bb2947-9106-422b-b688-3e10f8d58080.png',
       codeLink: 'https://github.com/MONAL7634',
       date: 'Oct 2024',
     },
