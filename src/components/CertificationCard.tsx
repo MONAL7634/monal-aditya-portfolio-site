@@ -17,6 +17,9 @@ const CertificationCard = ({
   link,
   image,
 }: CertificationCardProps) => {
+  // Use a placeholder image from Unsplash
+  const placeholderImage = "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=800&q=80";
+
   return (
     <div className="group card h-full flex flex-col hover:scale-105 hover:rotate-1 transition-all duration-500">
       <div className="relative overflow-hidden">
@@ -24,6 +27,10 @@ const CertificationCard = ({
           src={image}
           alt={title}
           className="w-full h-40 object-cover transition-all duration-500 group-hover:scale-110 group-hover:rotate-2"
+          onError={(e) => {
+            console.error(`Failed to load image: ${image}`);
+            e.currentTarget.src = placeholderImage;
+          }}
         />
         <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 backdrop-blur-sm">
           <a

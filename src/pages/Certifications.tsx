@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Layout from '@/components/Layout';
 import CertificationCard from '@/components/CertificationCard';
@@ -10,28 +9,28 @@ const Certifications = () => {
       issuer: 'Google',
       date: 'December 2023',
       link: 'https://coursera.org/verify/7L98TKD5A2WE',
-      image: '/lovable-uploads/65bdaad6-6018-45ab-bf06-99e3ecd497c3.png',
+      image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80',
     },
     {
       title: 'Server side JavaScript with Node.js',
       issuer: 'NIIT',
       date: 'May 2024',
       link: 'https://coursera.org/verify/GKA5EHQW7DAR',
-      image: '/lovable-uploads/e1d13741-f4ea-49f2-bed5-1ab71519efbc.png',
+      image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80',
     },
     {
       title: 'Programming in C++: A Hands-on Introduction',
       issuer: 'Codio',
       date: 'February 2024',
       link: 'https://coursera.org/verify/specialization/DUTT8D2JCHR',
-      image: '/lovable-uploads/8739ed5f-e2ae-4869-a40a-d6844b4ea37a.png',
+      image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80',
     },
     {
       title: 'Building Web Applications in PHP',
       issuer: 'University of Michigan',
       date: 'November 2024',
       link: 'https://coursera.org/verify/IZOZEZE4490',
-      image: '/lovable-uploads/d84296a4-a15a-4381-82ec-2832e80f25d3.png',
+      image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=800&q=80',
     }
   ];
 
@@ -66,4 +65,3 @@ const Certifications = () => {
 };
 
 export default Certifications;
-

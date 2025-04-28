@@ -19,6 +19,9 @@ const ProjectCard = ({
   codeLink,
   date,
 }: ProjectCardProps) => {
+  // Use a placeholder image from Unsplash
+  const placeholderImage = "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=800&q=80";
+
   return (
     <div className="group h-full flex flex-col backdrop-blur-md bg-white/30 rounded-lg shadow-xl border border-white/20 transition-all duration-500 hover:scale-105 hover:rotate-1">
       <div className="relative overflow-hidden">
@@ -29,7 +32,7 @@ const ProjectCard = ({
           loading="lazy"
           onError={(e) => {
             console.error(`Failed to load image: ${image}`);
-            e.currentTarget.src = '/placeholder.svg';
+            e.currentTarget.src = placeholderImage;
           }}
         />
         <div className="absolute top-4 right-4 backdrop-blur-md bg-white/50 rounded-full px-3 py-1 text-xs text-gray-700 font-medium transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-2">
