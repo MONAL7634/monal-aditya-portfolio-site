@@ -179,83 +179,75 @@ const Contact = () => {
           {/* Contact Form */}
           <div className="bg-white shadow-lg rounded-lg p-8">
             <h2 className="text-2xl font-bold mb-6">Send a Message</h2>
-            
             <form 
-              action="https://formsubmit.co/monaladitya7@gmail.com" 
-              method="POST"
-              onSubmit={handleSubmit}
-              className="space-y-6"
-            >
-              <input type="hidden" name="_autoresponse" value="Thank you for contacting Monal Aditya! I'll get back to you soon." />
-              
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                  Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  className={`w-full px-4 py-2 border rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-portfolio-primary ${
-                    formErrors.name ? 'border-red-500' : 'border-gray-300'
-                  }`}
-                  placeholder="Your name"
-                />
-                {formErrors.name && (
-                  <p className="mt-1 text-sm text-red-500">{formErrors.name}</p>
-                )}
-              </div>
-              
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  className={`w-full px-4 py-2 border rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-portfolio-primary ${
-                    formErrors.email ? 'border-red-500' : 'border-gray-300'
-                  }`}
-                  placeholder="Your email"
-                />
-                {formErrors.email && (
-                  <p className="mt-1 text-sm text-red-500">{formErrors.email}</p>
-                )}
-              </div>
-              
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  rows={6}
-                  className={`w-full px-4 py-2 border rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-portfolio-primary ${
-                    formErrors.message ? 'border-red-500' : 'border-gray-300'
-                  }`}
-                  placeholder="Your message"
-                ></textarea>
-                {formErrors.message && (
-                  <p className="mt-1 text-sm text-red-500">{formErrors.message}</p>
-                )}
-              </div>
-              
-              <button
-                type="submit"
-                className="w-full py-3 px-6 bg-portfolio-primary hover:bg-portfolio-secondary text-white rounded-md transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-portfolio-primary focus:ring-offset-2 disabled:opacity-70 disabled:cursor-not-allowed"
-                disabled={isSubmitting}
-              >
-                {isSubmitting ? 'Sending...' : 'Send Message'}
-              </button>
-            </form>
+  action="https://formsubmit.co/monaladitya7@gmail.com" 
+  method="POST"
+  className="space-y-6"
+>
+  <input type="hidden" name="_autoresponse" value="Thank you for contacting Monal Aditya! I'll get back to you soon." />
+  
+  {/* Fields */}
+  
+  <div>
+    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+      Name
+    </label>
+    <input
+      type="text"
+      id="name"
+      name="name"
+      required
+      value={formData.name}
+      onChange={handleChange}
+      className="..."
+      placeholder="Your name"
+    />
+  </div>
+
+  <div>
+    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+      Email
+    </label>
+    <input
+      type="email"
+      id="email"
+      name="email"
+      required
+      value={formData.email}
+      onChange={handleChange}
+      className="..."
+      placeholder="Your email"
+    />
+  </div>
+
+  <div>
+    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+      Message
+    </label>
+    <textarea
+      id="message"
+      name="message"
+      required
+      value={formData.message}
+      onChange={handleChange}
+      rows={6}
+      className="..."
+      placeholder="Your message"
+    ></textarea>
+  </div>
+
+  <button
+    type="submit"
+    className="..."
+    disabled={isSubmitting}
+  >
+    {isSubmitting ? 'Sending...' : 'Send Message'}
+  </button>
+</form>
+
+            
+               
+                  
           </div>
         </div>
       </section>
