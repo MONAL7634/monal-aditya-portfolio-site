@@ -9,28 +9,28 @@ const Certifications = () => {
       title: 'The Bits and Bytes of Computer Networking',
       issuer: 'Google',
       date: 'December 2023',
-      link: 'https://coursera.org/verify/7L98TKD5A2WE',
+      link: 'https://www.coursera.org/account/accomplishments/verify/7L98TKD5A2WE?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course',
       image: '/lovable-uploads/CERTIFICATE_LANDING_PAGE~7L98TKD5A2WE.jpeg',
     },
     {
       title: 'Server side JavaScript with Node.js',
       issuer: 'NIIT',
       date: 'May 2024',
-      link: 'https://coursera.org/verify/GKA5EHQW7DAR',
+      link: 'https://coursera.org/share/5b2370978bab8b9ada357eba3e68d0f7',
       image: '/lovable-uploads/CERTIFICATE_LANDING_PAGE~GKASEHQW7DAB.jpeg',
     },
     {
       title: 'Programming in C++: A Hands-on Introduction',
       issuer: 'Codio',
       date: 'February 2024',
-      link: 'https://coursera.org/verify/specialization/DUTT8D2JCHR',
+      link: 'https://coursera.org/share/1d969f5cc59e0d3fbef4eccd5d6a92aa',
       image: '/lovable-uploads/CERTIFICATE_LANDING_PAGE~JDUTT8D2JCHR.jpeg',
     },
     {
       title: 'Building Web Applications in PHP',
       issuer: 'University of Michigan',
       date: 'November 2024',
-      link: 'https://coursera.org/verify/IZOZEZE4490',
+      link: 'https://coursera.org/share/bbc2b28fe44d36bb0e4f98773ecb0ccf',
       image: '/lovable-uploads/CERTIFICATE_LANDING_PAGE~JJZQ6ZE54490.jpeg',
     }
   ];
