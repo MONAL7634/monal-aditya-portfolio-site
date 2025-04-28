@@ -6,39 +6,46 @@ import CertificationCard from '@/components/CertificationCard';
 const Certifications = () => {
   const certifications = [
     {
-      title: 'Frontend Developer (React) Certification',
-      issuer: 'Hackerrank',
-      date: 'December 2024',
-      link: 'https://www.hackerrank.com/certificates/yourlink',
-      image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
+      title: 'The Bits and Bytes of Computer Networking',
+      issuer: 'Google',
+      date: 'December 2023',
+      link: 'https://coursera.org/verify/7L98TKD5A2WE',
+      image: '/lovable-uploads/65bdaad6-6018-45ab-bf06-99e3ecd497c3.png',
     },
     {
-      title: 'Responsible AI and Safe Systems Certification',
-      issuer: 'NPTEL',
+      title: 'Server side JavaScript with Node.js',
+      issuer: 'NIIT',
+      date: 'May 2024',
+      link: 'https://coursera.org/verify/GKA5EHQW7DAR',
+      image: '/lovable-uploads/e1d13741-f4ea-49f2-bed5-1ab71519efbc.png',
+    },
+    {
+      title: 'Programming in C++: A Hands-on Introduction',
+      issuer: 'Codio',
+      date: 'February 2024',
+      link: 'https://coursera.org/verify/specialization/DUTT8D2JCHR',
+      image: '/lovable-uploads/8739ed5f-e2ae-4869-a40a-d6844b4ea37a.png',
+    },
+    {
+      title: 'Building Web Applications in PHP',
+      issuer: 'University of Michigan',
       date: 'November 2024',
-      link: 'https://nptel.ac.in/certificates/yourlink',
-      image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-    },
-    {
-      title: 'Data Structures Certification',
-      issuer: 'GeeksforGeeks',
-      date: 'June 2024',
-      link: 'https://www.geeksforgeeks.org/certificates/yourlink',
-      image: 'https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-    },
+      link: 'https://coursera.org/verify/IZOZEZE4490',
+      image: '/lovable-uploads/d84296a4-a15a-4381-82ec-2832e80f25d3.png',
+    }
   ];
 
   return (
     <Layout>
       <section className="section-container">
         <div className="text-center mb-12 animate-fade-in">
-          <h1 className="section-title mx-auto">Certifications</h1>
+          <h1 className="section-title mx-auto">My Certifications</h1>
           <p className="text-gray-700 max-w-2xl mx-auto">
             Professional certifications that validate my skills and knowledge
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 animate-slide-up">
+        <div className="grid md:grid-cols-2 gap-8 animate-slide-up">
           {certifications.map((certification) => (
             <CertificationCard key={certification.title} {...certification} />
           ))}
@@ -59,3 +66,4 @@ const Certifications = () => {
 };
 
 export default Certifications;
+
