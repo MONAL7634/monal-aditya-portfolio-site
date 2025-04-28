@@ -1,4 +1,4 @@
-# 🌐 Monal Adity's Portfolio
+# 🌐 Monal Aditya's Portfolio
 
 Welcome to my personal developer portfolio repository. This portfolio is a reflection of my journey in tech — featuring my skills, projects, certifications, and a little about me. It is built with simplicity, responsiveness, and clean design in mind.
 
